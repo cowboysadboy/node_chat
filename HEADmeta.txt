@@ -1,0 +1,21 @@
+  head(){
+    return {
+      link:[
+        {
+          rel: 'alternate',
+          href: 'http://ru.qform.io' + this.$route.path,
+          hreflang: 'ru'
+        },
+        {
+          rel: 'alternate',
+          href: 'http://en.qform.io' + this.$route.path,
+          hreflang: 'en'
+        },
+        {
+          rel: 'default',
+          href: 'http://en.qform.io' + this.$route.path,
+          hreflang: 'en'
+        },
+      ]
+    }
+  }
