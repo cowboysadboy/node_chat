@@ -32,7 +32,7 @@
         let btnSubmit = document.querySelector("#btnSend")
 
         // Подключаем WebSocket
-        const webSocket = new WebSocket('wss://cowboysadboy.store:8081');
+        const webSocket = new WebSocket('ws://localhost:8081');
 
         // Получаем сообщение от сервера
         webSocket.onmessage = function(e) {
