@@ -1,5 +1,5 @@
 // Подключаем библиотеку для работы с WebSocket
-const WebSocket = require('ws');
+const WebSocket = require('wss');
 // Создаём подключение к WS
 let wsServer = new WebSocket.Server({
     port: 8081
