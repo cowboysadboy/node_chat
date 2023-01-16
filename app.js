@@ -21,7 +21,7 @@ wsServer.on('connection', function(ws) {
             console.log(message)
             for (let u of users) {
                 // Отправляем им полученное сообщения
-                u.connection.send('message')
+                u.connection.send(message)
             }
         })
         // Делаем действие при выходе пользователя из чата
