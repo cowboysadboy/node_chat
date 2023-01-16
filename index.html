@@ -38,19 +38,20 @@
         webSocket.onmessage = function(e) {
             // Парсим полученные данные
             console.log(e.data)
-            const data = JSON.parse(e.data);
-            // Выводим в блог сообщение от сервера
-            chat.innerHTML += '<div class="msg">' + data.message + '</div>'
+                //const data = JSON.parse(e.data);
+                // Выводим в блог сообщение от сервера
+                // chat.innerHTML += '<div class="msg">' + data.message + '</div>'
         };
 
         // Отслеживаем нажатие мыши
         btnSubmit.addEventListener("click", () => {
             // Получаем текст из формы для ввода сообщения
             message = input.value;
-            // Отправка сообщения через WS
-            webSocket.send(JSON.stringify({
-                'message': message
-            }));
+            console.log(message)
+                // Отправка сообщения через WS
+            webSocket.send({
+                'message': input.value
+            });
             // Очищаем поле для ввода текста
             input.value = '';
         })

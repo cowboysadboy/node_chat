@@ -20,7 +20,7 @@ wsServer.on('connection', function(ws) {
             // Перебираем всех подключенных клиентов
             for (let u of users) {
                 // Отправляем им полученное сообщения
-                u.connection.send(message)
+                u.connection.send(users)
             }
         })
         // Делаем действие при выходе пользователя из чата
