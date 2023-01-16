@@ -18,6 +18,7 @@ wsServer.on('connection', function(ws) {
         // Получаем сообщение от клиента
     ws.on('message', function(message) {
             // Перебираем всех подключенных клиентов
+            console.log(message)
             for (let u of users) {
                 // Отправляем им полученное сообщения
                 u.connection.send(message)

@@ -47,11 +47,10 @@
         btnSubmit.addEventListener("click", () => {
             // Получаем текст из формы для ввода сообщения
             message = input.value;
-            console.log(message)
-                // Отправка сообщения через WS
-            webSocket.send({
-                'message': input.value
-            });
+            // Отправка сообщения через WS
+            webSocket.send(JSON.stringify({
+                'message': message
+            }));
             // Очищаем поле для ввода текста
             input.value = '';
         })
